@@ -19,8 +19,6 @@ let db = [
     }
 ];
 
-
-
 function makeId() {
     let id = "";
     let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -58,7 +56,7 @@ module.exports = {
             db[db.indexOf(matchedModel)] = model;
             cb(null, model);
         } else {
-            cb(new Error('There is no such model'), null)
+            cb(new Error('There is no such controllers'), null)
         }
     },
     remove(id, cb) {
@@ -68,7 +66,7 @@ module.exports = {
             db.splice(db.indexOf(matchedModel), 1);
             cb(null);
         } else {
-            cb(new Error('There is no such model'))
+            cb(new Error('There is no such controllers'))
         }
     }
 };
